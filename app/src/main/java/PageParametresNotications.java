@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class PageInformations extends AppCompatActivity {
+public class PageParametresNotications extends AppCompatActivity {
+
 
     ImageButton buttonInventaire;
     ImageButton buttonAccueil;
@@ -16,22 +17,20 @@ public class PageInformations extends AppCompatActivity {
     ImageButton buttonStatistiques;
     ImageButton buttonCompte;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.informations);
+        setContentView(R.layout.parametres_notifications);
 
         //Bouton vers accueil
         buttonAccueil = (ImageButton) findViewById(R.id.logo);
         buttonAccueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, MainActivity.class);
+                Intent intentLoad = new Intent(PageParametresNotications.this, MainActivity.class);
                 startActivity(intentLoad);
             }
         });
-
 
 
         //Bouton vers inventaire
@@ -39,7 +38,7 @@ public class PageInformations extends AppCompatActivity {
         buttonInventaire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageInventaire.class);
+                Intent intentLoad = new Intent(PageParametresNotications.this, PageInventaire.class);
                 startActivity(intentLoad);
             }
         });
@@ -49,7 +48,7 @@ public class PageInformations extends AppCompatActivity {
         buttonCalendrier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageCalendrier.class);
+                Intent intentLoad = new Intent(PageParametresNotications.this, PageCalendrier.class);
                 startActivity(intentLoad);
             }
         });
@@ -59,7 +58,7 @@ public class PageInformations extends AppCompatActivity {
         buttonProgramme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageProgramme.class);
+                Intent intentLoad = new Intent(PageParametresNotications.this, PageProgramme.class);
                 startActivity(intentLoad);
             }
         });
@@ -69,7 +68,7 @@ public class PageInformations extends AppCompatActivity {
         buttonMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageMap.class);
+                Intent intentLoad = new Intent(PageParametresNotications.this, PageMap.class);
                 startActivity(intentLoad);
             }
         });
@@ -79,7 +78,7 @@ public class PageInformations extends AppCompatActivity {
         buttonStatistiques.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageStatistiques.class);
+                Intent intentLoad = new Intent(PageParametresNotications.this, PageStatistiques.class);
                 startActivity(intentLoad);
             }
         });
@@ -89,10 +88,11 @@ public class PageInformations extends AppCompatActivity {
         buttonCompte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageCompte.class);
+                Intent intentLoad = new Intent(PageParametresNotications.this, PageCompte.class);
                 startActivity(intentLoad);
             }
         });
+
 
     }
 }

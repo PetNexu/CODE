@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class PageInformations extends AppCompatActivity {
+public class PageCreerAmbiance extends AppCompatActivity{
+
 
     ImageButton buttonInventaire;
     ImageButton buttonAccueil;
@@ -15,19 +16,19 @@ public class PageInformations extends AppCompatActivity {
     ImageButton buttonMap;
     ImageButton buttonStatistiques;
     ImageButton buttonCompte;
-
+    ImageButton valider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.informations);
+        setContentView(R.layout.creer_ambiance);
 
         //Bouton vers accueil
         buttonAccueil = (ImageButton) findViewById(R.id.logo);
         buttonAccueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, MainActivity.class);
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, MainActivity.class);
                 startActivity(intentLoad);
             }
         });
@@ -39,7 +40,7 @@ public class PageInformations extends AppCompatActivity {
         buttonInventaire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageInventaire.class);
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, PageInventaire.class);
                 startActivity(intentLoad);
             }
         });
@@ -49,7 +50,7 @@ public class PageInformations extends AppCompatActivity {
         buttonCalendrier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageCalendrier.class);
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, PageCalendrier.class);
                 startActivity(intentLoad);
             }
         });
@@ -59,7 +60,7 @@ public class PageInformations extends AppCompatActivity {
         buttonProgramme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageProgramme.class);
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, PageProgramme.class);
                 startActivity(intentLoad);
             }
         });
@@ -69,7 +70,7 @@ public class PageInformations extends AppCompatActivity {
         buttonMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageMap.class);
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, PageMap.class);
                 startActivity(intentLoad);
             }
         });
@@ -79,7 +80,7 @@ public class PageInformations extends AppCompatActivity {
         buttonStatistiques.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageStatistiques.class);
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, PageStatistiques.class);
                 startActivity(intentLoad);
             }
         });
@@ -89,10 +90,22 @@ public class PageInformations extends AppCompatActivity {
         buttonCompte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLoad = new Intent(PageInformations.this, PageCompte.class);
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, PageCompte.class);
                 startActivity(intentLoad);
             }
         });
+
+        //Bouton valider
+        valider = (ImageButton) findViewById(R.id.valider);
+        valider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLoad = new Intent(PageCreerAmbiance.this, PageProgramme.class);
+                startActivity(intentLoad);
+            }
+        });
+
+
 
     }
 }

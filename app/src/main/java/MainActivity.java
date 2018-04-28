@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Bouton vers statistiques
-        buttonStatistiques = (ImageButton) findViewById(R.id.programme);
+        buttonStatistiques = (ImageButton) findViewById(R.id.statistiques);
         buttonStatistiques.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
